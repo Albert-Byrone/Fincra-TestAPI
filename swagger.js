@@ -8,7 +8,7 @@ const doc = {
     title: 'Fincra Test API Documentation',
     description: 'Customer support ticketing system API documentation'
   },
-  host: 'localhost:5000'
+  host: 'https://fincra-testapi.onrender.com/'
 };
 
 const outputFile = './swagger-output.json';
