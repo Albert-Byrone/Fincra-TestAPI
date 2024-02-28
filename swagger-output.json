@@ -5,7 +5,7 @@
     "description": "Customer support ticketing system API documentation",
     "version": "1.0.0"
   },
-  "host": "https://fincra-testapi.onrender.com",
+  "host": "fincra-testapi.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
