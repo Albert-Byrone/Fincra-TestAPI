@@ -2,6 +2,10 @@
 
 This project is a customer support ticketing system designed to facilitate the process of handling customer support requests. Built with Node.js, Express and MongoDB it offers a robust backend solution for managing tickets, users, and comments efficiently.
 
+## Endpoints
+
+![Drag Racing](./images/api.png)
+
 ## Features
 
 - **Customer Features:**
