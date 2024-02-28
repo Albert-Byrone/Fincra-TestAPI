@@ -1,17 +1,12 @@
-import { Schema, Model, Document, model } from "mongoose";
+// import { Schema, Model, Document, model } from "mongoose";
 const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 
 const objectId = mongoose.Schema.Types.ObjectId;
-interface IUser extends Document {
-  username: string;
-  email: string;
-  password: string;
-  role: "customer" | "support" | "admin";
-  comparePassword: (candidatePassword: string) => Promise<boolean>;
-}
 
-const userSchema = new Schema < IUser > (
+
+
+const userSchema = new mongoose.Schema(
   {
     _id: {
       type: objectId,
@@ -33,6 +28,7 @@ const userSchema = new Schema < IUser > (
     password: {
       type: String,
       required: true,
+      // Add a method to encrypt the password
     },
     role: {
       type: String,
@@ -46,7 +42,7 @@ const userSchema = new Schema < IUser > (
 );
 
 // Pre-save hook to hash the password
-userSchema.pre < IUser > ("save", async function (next) {
+userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
 
   try {
@@ -64,5 +60,4 @@ userSchema.methods.comparePassword = async function (candidatePassword) {
 };
 const User = mongoose.model("User", userSchema);
 
-// export { User };
-module.exports = { User };
+module.exports = User;
