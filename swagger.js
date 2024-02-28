@@ -1,7 +1,4 @@
 const swaggerAutogen = require('swagger-autogen')();
-// const userRoute = require("./routes/user.routes")
-// const ticketRoute = require("./routes/ticket.routes")
-// const commentRoute = require("./routes/comment.routes")
 
 const doc = {
   info: {
@@ -13,14 +10,11 @@ const doc = {
 };
 
 const outputFile = './swagger-output.json';
-const endpointFiles = '/app.js';
-const routes = ['./routes/user.routes', './routes/ticket.routes', './routes/comment.routes'];
+const endpointFiles = ['./app.js']; // Ensure this is an array of file paths
 
 /* NOTE: If you are using the express Router, you must pass in the 'routes' only the 
 root file where the route starts, such as index.js, app.js, routes.js, etc ... */
 
-// swaggerAutogen(outputFile, routes, doc);
-
-swaggerAutogen(outputFile, routes, doc).then(() => {
+swaggerAutogen(outputFile, endpointFiles, doc).then(() => {
   require('./app.js'); // Your project's root file
 });

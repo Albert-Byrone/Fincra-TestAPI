@@ -11,7 +11,7 @@
     "https"
   ],
   "paths": {
-    "/register": {
+    "/users/register": {
       "post": {
         "description": "",
         "parameters": [
@@ -50,7 +50,7 @@
         }
       }
     },
-    "/login": {
+    "/users/login": {
       "post": {
         "description": "",
         "parameters": [
@@ -86,7 +86,7 @@
         }
       }
     },
-    "/profile": {
+    "/users/profile": {
       "get": {
         "description": "",
         "parameters": [
@@ -112,7 +112,7 @@
         }
       }
     },
-    "/": {
+    "/tickets/": {
       "post": {
         "description": "",
         "parameters": [
@@ -156,7 +156,7 @@
         }
       }
     },
-    "/{id}": {
+    "/tickets/{id}": {
       "get": {
         "description": "",
         "parameters": [
@@ -191,7 +191,7 @@
         }
       }
     },
-    "/{id}/status": {
+    "/tickets/{id}/status": {
       "patch": {
         "description": "",
         "parameters": [
@@ -238,7 +238,7 @@
         }
       }
     },
-    "/{id}/assign": {
+    "/tickets/{id}/assign": {
       "patch": {
         "description": "",
         "parameters": [
@@ -288,7 +288,7 @@
         }
       }
     },
-    "/user/tickets": {
+    "/tickets/user/tickets": {
       "get": {
         "description": "",
         "parameters": [
@@ -317,7 +317,7 @@
         }
       }
     },
-    "/monthly/report": {
+    "/tickets/monthly/report": {
       "get": {
         "description": "",
         "parameters": [
@@ -346,7 +346,7 @@
         }
       }
     },
-    "/create": {
+    "/comments/create": {
       "post": {
         "description": "",
         "parameters": [
@@ -390,7 +390,7 @@
         }
       }
     },
-    "/ticket/{ticketId}": {
+    "/comments/ticket/{ticketId}": {
       "get": {
         "description": "",
         "parameters": [
