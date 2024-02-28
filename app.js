@@ -7,7 +7,6 @@ const ticketRoute = require("./routes/ticket.routes")
 const commentRoute = require("./routes/comment.routes")
 
 const logger = require('./utils/logger'); // Adjust the path as necessary
-const { info } = require("console");
 
 
 const swaggerUi = require('swagger-ui-express');
