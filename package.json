@@ -6,7 +6,8 @@
   "scripts": {
     "start:server": "nodemon app.js",
     "test": "jest",
-    "seed": "node seedDatabase.js"
+    "seed": "node seedDatabase.js",
+    "swagger": "node ./swagger.js"
   },
   "author": "Albert Byrone",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "mongoose": "^8.2.0",
     "node-mocks-http": "^1.14.1",
     "pdfkit": "^0.14.0",
+    "swagger-ui-express": "^5.0.0",
     "winston": "^3.11.0",
     "winston-daily-rotate-file": "^5.0.0"
   },
@@ -41,6 +43,7 @@
     "jest": "^29.7.0",
     "start-server-and-test": "^2.0.3",
     "supertest": "^6.3.4",
+    "swagger-autogen": "^2.23.7",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
